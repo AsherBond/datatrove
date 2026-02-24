@@ -21,7 +21,7 @@ configs:
 - config_name: default
   data_files:
   - split: [[input_dataset_split]]
-    path: data/*.parquet
+    path: data/**/*.parquet
 train-eval-index:
 - config: default
   task: text-generation
