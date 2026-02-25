@@ -99,7 +99,7 @@ def count_documents_in_repo(repo_id: str) -> int:
         fs.invalidate_cache(cache_path)
 
         # Find all parquet files in the repo's data directory
-        parquet_files = fs.glob(f"datasets/{repo_id}/data/*.parquet")
+        parquet_files = fs.glob(f"datasets/{repo_id}/data/**/*.parquet")
 
         if not parquet_files:
             logger.info(f"No parquet files found yet in {repo_id}")
